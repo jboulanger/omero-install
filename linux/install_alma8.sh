@@ -11,12 +11,12 @@ ICEVER=${ICEVER:-ice36}
 bash -eux step01_alma8_init.sh
 
 # install java
-bash -eux step01_alma_java_deps.sh
+bash -eux step01_alma8_java_deps.sh
 
-bash -eux step01_alma_deps.sh
+bash -eux step01_alma8_deps.sh
 
 # install ice
-bash -eux step01_alma_ice_deps.sh
+bash -eux step01_alma8_ice_deps.sh
 
 # install Postgres
 bash -eux step01_alma8_pg_deps.sh
