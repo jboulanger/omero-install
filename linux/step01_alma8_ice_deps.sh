@@ -17,6 +17,8 @@ if [ "$ICEVER" = "ice36" ]; then
                    libicestorm3.6
 
     #end-recommended
+    # locales are missing in alma 8
+    dnf -y install glibc-all-langpacks
     # reset the locale
     localedef -i en_US -f UTF-8 en_US.UTF-8
 elif [ "$ICEVER" = "ice36-devel" ]; then
@@ -31,6 +33,8 @@ elif [ "$ICEVER" = "ice36-devel" ]; then
                    libice3.6-c++ \
                    libicestorm3.6 \
                    ice-all-devel
-
+    # locales are missing in alma 8
+    dnf -y install glibc-all-langpacks
+    # reset the locale
     localedef -i en_US -f UTF-8 en_US.UTF-8
 fi
